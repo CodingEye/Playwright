@@ -18,6 +18,10 @@ test('Demo Login1', async ({ page }) => {
 
   await page.pause();
 
+  //visual validation with screenshot
+  await expect(page).toHaveScreenshot();  
+  //await page.screenshot({ path: 'screenshot.png', fullPage: true });
+
   await page.close();
   
 });
