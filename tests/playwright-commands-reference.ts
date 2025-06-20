@@ -80,3 +80,7 @@ import { expect, Page } from '@playwright/test';
 // test.afterEach(async ({ page }) => { ... });
 
 // For more, see: https://playwright.dev/docs/api/class-page
+
+//-------------------------
+  // Expect a title "to contain" a substring.
+  //await expect(page).toHaveTitle(/Playwright/);

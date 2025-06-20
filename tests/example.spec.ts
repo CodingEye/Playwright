@@ -11,19 +11,17 @@ test('Demo Login1', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Enter your password' }).fill('123456');
   await page.getByRole('link', { name: 'Sign in' }).click();
 
-  // Wait for navigation to the dashboard page after login
+  //to check successful login, we can check the URL or a specific element on the dashboard page 
+  //Welcome message / Logout button //Login Url etc.
+  //Wait for navigation to the dashboard page after login
   await expect(page).toHaveURL('https://demo.applitools.com/app.html');
 
   await page.pause();
-  // Check for successful login by verifying the presence of the 'Your account' heading
-  //await expect(page.getByRole('heading', { name: 'Your account' })).toBeVisible();
+
   await page.close();
-  // ---------------------
-  //await context.close();
-  //await browser.close();  
-  // Expect a title "to contain" a substring.
-  //await expect(page).toHaveTitle(/Playwright/);
+  
 });
+
 
 /*
 test('get started link', async ({ page }) => {
